@@ -1,5 +1,9 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+  if(!this.image){
+    this.image = '<img id="dog" src="goldenRetriever.jpg" alt="golden">'
+  }
+  this.$node.append(this.image);
 }
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -10,6 +14,7 @@ BlinkyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.toggle();
  }
+
 
 
 /*

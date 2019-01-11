@@ -33,5 +33,10 @@ $(document).ready(function() {
 
     $('body').append(dancer.$node);
   });
+
+  $('button').click(function () {
+    
+  });
+
 });
 

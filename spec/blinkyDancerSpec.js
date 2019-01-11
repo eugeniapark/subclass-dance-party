@@ -31,4 +31,40 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
+
+});
+
+describe('dancer1', function() {
+  var dancer1, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    dancer1 = new Dancer1(20, 30, timeBetweenSteps);
+  });
+
+  it('should have a step function that makes its node blink', function() {
+    sinon.spy(dancer1.$node, 'toggle');
+    dancer1.step();
+    expect(dancer1.$node.toggle.called).to.be.true;
+  });
+
+});
+
+describe('dancer2', function() {
+
+  var clock, dancer2;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    dancer2 = new Dancer2(20, 30, timeBetweenSteps);
+  });
+
+  it('should have a step function that makes its node blink', function() {
+    sinon.spy(dancer2.$node, 'toggle');
+    dancer2.step();
+    expect(dancer2.$node.toggle.called).to.be.true;
+  });
+
 });

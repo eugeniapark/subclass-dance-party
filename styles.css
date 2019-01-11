@@ -3,12 +3,43 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url('DanceFloor.jpg');
+  background-size: cover;
   font-size: 18px;
+  overflow: hidden;
 }
-body, a:link, a:visited, a:active{
+/* body, a:link, a:visited, a:active{
+  color: lightblue;
+} */
+
+a:link, a:visited, a:active{
   color: lightblue;
 }
+
+#dog {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+}
+
+/* #orignalDancer {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+} */
+
+/* #originalDancer {
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+
+#golden {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+} */
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
@@ -20,8 +51,10 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
-}
+
+.dancer {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+} 
+

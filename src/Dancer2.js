@@ -1,7 +1,7 @@
-let MakeDancer2 = function() {
-    MakeDancer1.call(this);
-
+var Dancer2 = function(top, left, timeBetweenSteps) {
+    this.image = '<img id="dog" src="Shiba.jpg" alt="shiba">'
+    BlinkyDancer.call(this, top, left, timeBetweenSteps);
 }
 
-MakeDancer2.prototype = Object.create(MakeDancer1.prototype);
-MakeDancer2.prototype.constructor = MakeDancer2;
+Dancer2.prototype = Object.create(Dancer1.prototype);
+Dancer2.prototype.constructor = Dancer2;
